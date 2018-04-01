@@ -68,7 +68,7 @@ var handlers = {
     }
 
     else {
-      this.emit(":ask", 'Oops. I didn\'t hear blood or diagnositics. So, I\'m taking your to blood reports. what type of blood report would you like? You can say blood gas, hematology or lights.');
+      this.emit(":ask", 'Oops. I didn\'t hear blood or diagnostics. So, I\'m taking your to blood reports. what type of blood report would you like? You can say blood gas, hematology or lights.');
     }
 
   },
