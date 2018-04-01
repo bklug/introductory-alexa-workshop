@@ -1,0 +1,118 @@
+{
+  "languageModel": {
+      "invocationName": "b c net",
+      "intents": [
+        {
+          "name": "PatientNumber",
+          "slots": [
+            {
+              "name": "Number",
+              "type": "AMAZON.NUMBER"
+            }
+            
+          ],
+          "samples": [
+            "patient {Number}",
+            "patient number {Number}",
+            "{Number}"
+            ]
+        },
+        {
+          "name": "ReportType",
+          "slots": [
+            {
+              "name": "Type",
+              "type": "ReportTypes"
+            }
+          ],
+          "samples": [
+            "{Type}"
+          ]
+        },
+        {
+          "name": "BloodReportType",
+          "slots": [
+            {
+              "name": "BloodType",
+              "type": "BloodReportTypes"
+            }
+          ],
+          "samples": [
+            "{BloodType}"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "slots": [],
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "slots": [],
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "slots": [],
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "slots": [],
+          "samples": []
+        },   
+        {
+          "name": "AMAZON.HelpIntent",
+          "slots": [],
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "name": "ReportTypes",
+          "values": [
+            {
+              "id": "",
+              "name": {
+                "value": "blood report",
+                "synonyms": ["blood", "blood tests", "blood results"]
+              }
+            },
+            {
+              "id": "",
+              "name": {
+                "value": "diagnostics",
+                "synonyms": ["diagnostic", "diagnostic tests", "diagnostic results"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "BloodReportTypes",
+          "values" : [
+            {
+              "id": "",
+              "name": {
+              "value": "arterial blood gas",
+              "synonyms" : ["blood gas", "gas"]
+              }
+            },
+            {
+              "id": "",
+              "name": {
+                "value": "hematology",
+                "synonyms" : ["hema"]
+              }
+            },
+            {
+              "id": "",
+              "name": {
+                "value": "electrolytes",
+                "synonyms" : ["lights"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+}
