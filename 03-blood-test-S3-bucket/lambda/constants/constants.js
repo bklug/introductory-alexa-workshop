@@ -6,12 +6,6 @@ var constants = Object.freeze({
   //  DynamoDB Table Name
   dynamoDBTableName : '',
 
-  // Skill States
-  states : {
-    BLOOD : '_BLOOD',
-    DIAGNOSTICS: '_DIAGNOSTICS'
-  },
-
   ARTERIAL_BLOOD_GAS : 0,
   HEMATOLOGY : 1,
   ELECTROLYTES : 2,
@@ -21,8 +15,6 @@ var constants = Object.freeze({
   // S3 bucket parameters
   BUCKET : 'bcnet-blood-results',
   KEY : 'blood-results.json'
-
-
 
 });
 

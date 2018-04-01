@@ -31,7 +31,6 @@ var handlers = {
   },
 
   'LaunchRequest': function () {
-    this.attributes['state'] = '';
     this.emit(':ask', 'Welcome to the lab results skill. Use this skill to obtain a patient\'s blood work or diagnostic reports. First, tell me the patient number.', 'First, tell me the patient number?');
   },
 
@@ -73,16 +72,11 @@ var handlers = {
     var bloodReports = ["blood report", "blood", "blood tests", "blood results"];
     var diagnosticReports = ["diagnostics","diagnostic", "diagnostic tests", "diagnostic results"];
     
-    // Always give blood results at this time
-    this.attributes['state'] = constants.states.BLOOD;
-
     if (bloodReports.indexOf(reportType) > -1) {
         this.emit(":ask", "What type of blood report would you like? You can say blood gas, hematology or lights.", 'You can say blood gas, hematology or lights.');
     }
     else if (diagnosticReports.indexOf(reportType) > -1) {
-      // We'll do this later.
-      //this.attributes['state'] = constants.states.DIAGNOSTICS;
-       
+        
       this.emit(":ask", 'We\'re sorry, but diagnostic reports are not avaible at this time. Instead, what type of blood report would you like? You can say blood gas, hematology or lights.', 'You can say blood gas, hematology or lights.')
     
     }
@@ -132,27 +126,15 @@ var handlers = {
   },
 
   'AMAZON.YesIntent': function () {
-    var state = this.attributes['state'];
-    if (state === '') {
-      this.emit(':ask','Would you like a blood test or a diagnostic report?');
-    }
-    else {
+    
       this.emit(':ask', 'Would you like a blood test or a diagnostic report?');
-    }
+
   },
 
   'AMAZON.NoIntent': function () {
-    var state = this.attributes['state'];
-    if (state === '') {
       this.emit(':ask', `OK. Please speak another patient number`,  `Please speak another patient number.`);
-    }
-    else if (state !== '') {
-      this.emit(':tell', `Thank you for using this kick ass skill. Goodbye`);
-    }
-    else {
-      this.emit(':tell', `Thank you for using this kick ass skill. Goodbye`);
-    }
   },
+  
   'AMAZON.StopIntent': function () {
     // State Automatically Saved with :tell
     this.emit(':tell', `Goodbye.`);
