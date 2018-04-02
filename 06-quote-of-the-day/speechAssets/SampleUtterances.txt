@@ -1,0 +1,9 @@
+Hello say hello to {FirstName}
+Hello  hello {FirstName}
+
+Quote get me a quote
+Quote get a quote
+
+NextQuote one more
+NextQuote another quote
+
