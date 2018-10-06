@@ -17,16 +17,7 @@ var handlers = {
   'AMAZON.FallbackIntent' : function () {
     this.emitWithState('AMAZON.HelpIntent');
   },
-  'AMAZON.CancelIntent': function () {
-    this.emit(':tell', 'cancel intent');
-  }, 
-  'AMAZON.HelpIntent' : function () {
+    'AMAZON.HelpIntent' : function () {
     this.emit(':ask', 'Help intent. Try saying hi or hello',  'Try saying hi or hello');
-  },
-  'AMAZON.StopIntent': function () {
-    this.emit(':tell', 'stop intent');
-  },
-  'AMAZON.NavigateHomeIntent': function () {
-    this.emit(':tell', 'navigate home intent');
   }
 };
