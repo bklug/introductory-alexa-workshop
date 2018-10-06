@@ -1,7 +1,7 @@
 var bloodWork = [
         {
             "number": "1",
-            "name": "Bill Klug",
+            "name": "John Smith",
             "date": "January 22, 2018", 
             "arterialBloodGas": {
                 "ph" : "1.46",
@@ -33,7 +33,7 @@ var bloodWork = [
         },
         {
             "number": "2",
-            "name": "Rob Kruger",
+            "name": "Mary Jones",
             "date": "March 10, 2018",
             "arterialBloodGas": {
                 "ph" : "7.46",
