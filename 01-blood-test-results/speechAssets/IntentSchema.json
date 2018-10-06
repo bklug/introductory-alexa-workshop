@@ -10,19 +10,25 @@
       ]
     },
     {
-      "intent": "AMAZON.StopIntent"
-    },
-    {
-      "intent": "AMAZON.CancelIntent"
-    },
-    {
       "intent": "AMAZON.YesIntent"
     },
     {
       "intent": "AMAZON.NoIntent"
     },   
     {
+      "intent": "AMAZON.FallbackIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
       "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.NavigateHomeIntent"
     }
   ]
 }
