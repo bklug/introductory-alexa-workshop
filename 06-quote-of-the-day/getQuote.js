@@ -3,7 +3,7 @@
 ** Place this function at the bottom of the index.js file, outside the handler fucntion
 ** To call the function:
 **    getQuote(quote => {
-**      this.emit(':ask', `${quote}. Would you like to hear another quote? You can say one more or another quote.`, 'Would you to hear another quote? You can say one more or another quote');
+**      this.emit(':ask', `${quote}. Would you like to hear a quote of the day?`, '');
 **    });
 */
 
